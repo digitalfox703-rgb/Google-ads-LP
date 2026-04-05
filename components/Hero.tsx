@@ -77,7 +77,7 @@ export function Hero() {
                 <LogoPlaceholder text="GLOBAL TECH" />
                 <LogoPlaceholder text="NEXUS" />
                 <LogoPlaceholder text="PULSE" />
-                <LogoPlaceholder text="ELEVATE" />
+                <BDouinLogo />
                 <LogoPlaceholder text="LUMINA" />
               </div>
             ))}
@@ -93,6 +93,23 @@ function LogoPlaceholder({ text }: { text: string }) {
     <div className="text-xl font-bold tracking-tighter text-neutral-800 flex items-center gap-2">
       <div className="w-6 h-6 bg-neutral-800 rounded-sm" />
       {text}
+    </div>
+  );
+}
+
+function BDouinLogo() {
+  return (
+    <div className="flex items-end gap-3 text-neutral-800">
+      <div className="relative h-10 w-14 shrink-0 opacity-80">
+        <div className="absolute left-2 top-2 h-5 w-8 rounded-full border-[3px] border-neutral-800 bg-transparent" />
+        <div className="absolute left-0 top-4 h-4 w-5 rounded-full border-[3px] border-neutral-800 bg-transparent" />
+        <div className="absolute right-0 top-4 h-4 w-5 rounded-full border-[3px] border-neutral-800 bg-transparent" />
+        <div className="absolute left-3 top-0 h-5 w-6 rounded-full border-[3px] border-neutral-800 bg-transparent" />
+        <div className="absolute left-3 top-8 h-3 w-1 -rotate-12 rounded-full bg-neutral-400" />
+        <div className="absolute left-6 top-9 h-4 w-1 rotate-12 rounded-full bg-neutral-400" />
+        <div className="absolute left-10 top-8 h-3 w-1 rotate-12 rounded-full bg-neutral-400" />
+      </div>
+      <span className="font-serif text-[2.2rem] font-semibold leading-none tracking-tight">BDouin</span>
     </div>
   );
 }
