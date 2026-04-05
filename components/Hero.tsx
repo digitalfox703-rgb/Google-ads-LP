@@ -37,7 +37,7 @@ export function Hero() {
             allowFullScreen
           />
         </div>
-        
+
         <p className="mt-4 text-sm text-neutral-500 font-mono flex items-center justify-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#FF3300] animate-pulse" />
           Cas réel : des campagnes “rentables” qui détruisaient la marge.
@@ -53,7 +53,7 @@ export function Hero() {
         <button className="bg-neutral-950 text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-900 transition-colors shadow-xl shadow-neutral-950/10 ring-1 ring-neutral-950/5 flex items-center gap-3 group">
           Voir où je perds de l’argent
           <span className="bg-[#FF3300] text-white p-1 rounded-full group-hover:translate-x-1 transition-transform">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
           </span>
         </button>
       </motion.div>
