@@ -99,17 +99,24 @@ function LogoPlaceholder({ text }: { text: string }) {
 
 function BDouinLogo() {
   return (
-    <div className="flex items-end gap-3 text-neutral-800">
-      <div className="relative h-10 w-14 shrink-0 opacity-80">
-        <div className="absolute left-2 top-2 h-5 w-8 rounded-full border-[3px] border-neutral-800 bg-transparent" />
-        <div className="absolute left-0 top-4 h-4 w-5 rounded-full border-[3px] border-neutral-800 bg-transparent" />
-        <div className="absolute right-0 top-4 h-4 w-5 rounded-full border-[3px] border-neutral-800 bg-transparent" />
-        <div className="absolute left-3 top-0 h-5 w-6 rounded-full border-[3px] border-neutral-800 bg-transparent" />
-        <div className="absolute left-3 top-8 h-3 w-1 -rotate-12 rounded-full bg-neutral-400" />
-        <div className="absolute left-6 top-9 h-4 w-1 rotate-12 rounded-full bg-neutral-400" />
-        <div className="absolute left-10 top-8 h-3 w-1 rotate-12 rounded-full bg-neutral-400" />
+    <div className="flex items-end gap-2 text-neutral-800">
+      <span className="font-serif text-[2.4rem] font-semibold leading-none tracking-[-0.04em]">
+        BDouin
+      </span>
+      <div className="relative mb-1 h-11 w-16 shrink-0 opacity-80">
+        <div className="absolute left-4 top-1 h-4 w-7 rounded-full border-[3px] border-neutral-400 bg-white" />
+        <div className="absolute left-1 top-4 h-5 w-6 rounded-full border-[3px] border-neutral-400 bg-white" />
+        <div className="absolute right-1 top-4 h-5 w-6 rounded-full border-[3px] border-neutral-400 bg-white" />
+        <div className="absolute left-6 top-0 h-5 w-7 rounded-full border-[3px] border-neutral-400 bg-white" />
+        <div className="absolute left-4 top-6 h-5 w-10 rounded-full border-[3px] border-neutral-400 bg-white" />
+        <div className="absolute left-[22px] top-[15px] h-1.5 w-1.5 rounded-full bg-neutral-400" />
+        <div className="absolute left-[28px] top-[13px] h-1.5 w-1.5 rounded-full bg-neutral-400" />
+        <div className="absolute left-[34px] top-[15px] h-1.5 w-1.5 rounded-full bg-neutral-400" />
+        <div className="absolute left-[24px] top-[19px] h-2.5 w-10 rounded-full border-[3px] border-neutral-400 border-t-0" />
+        <div className="absolute left-5 top-8 h-3 w-1 -rotate-12 rounded-full bg-neutral-400" />
+        <div className="absolute left-9 top-9 h-4 w-1 rotate-12 rounded-full bg-neutral-400" />
+        <div className="absolute left-13 top-8 h-3 w-1 rotate-[18deg] rounded-full bg-neutral-400" />
       </div>
-      <span className="font-serif text-[2.2rem] font-semibold leading-none tracking-tight">BDouin</span>
     </div>
   );
 }
