@@ -12,12 +12,12 @@ export function Hero() {
         className="max-w-4xl"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-950 mb-6 leading-[1.1]">
-          Votre Google Ads est rentable.<br />
-          <span className="text-neutral-400">En réalité, il vous fait perdre de l’argent.</span>
+          Vos chiffres Google Ads sont bons.<br />
+          <span className="text-neutral-400">Alors pourquoi votre business ne décolle pas ?</span>
         </h1>
         <p className="text-lg sm:text-xl text-neutral-600 mb-12 font-medium">
-          Les chiffres semblent bons.<br />
-          Votre business raconte autre chose.
+          Parce que Google est optimisé pour dépenser votre budget, pas pour faire croître votre marge.<br />
+          Il est temps de sortir de la boîte noire.
         </p>
       </motion.div>
 
