@@ -11,7 +11,7 @@ export function Hero() {
         transition={{ duration: 0.6 }}
         className="max-w-6xl"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-[3.85rem] lg:text-[4.8rem] font-bold tracking-[-0.04em] text-neutral-950 mb-8 leading-[0.96]">
+        <h1 className="text-4xl sm:text-5xl md:text-[3.2rem] lg:text-[4rem] font-bold tracking-[-0.04em] text-neutral-950 mb-8 leading-[0.98]">
           <span className="block">Vos chiffres Google Ads sont bons.</span>
           <span className="mt-3 block text-neutral-400">
             Alors pourquoi votre business
