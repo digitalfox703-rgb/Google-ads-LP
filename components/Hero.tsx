@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Play } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -26,36 +25,17 @@ export function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full max-w-5xl relative group cursor-pointer"
+        className="w-full max-w-5xl relative"
       >
-        {/* Video Placeholder */}
         <div className="aspect-video bg-neutral-950 rounded-2xl overflow-hidden relative shadow-2xl ring-1 ring-neutral-950/5">
-          <div className="absolute inset-0 bg-gradient-to-tr from-neutral-950/80 to-transparent z-10" />
-          
-          {/* Abstract waveform/data visualization background for the placeholder */}
-          <div className="absolute inset-0 opacity-20 flex items-center justify-center gap-2">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="w-2 bg-[#FF3300] rounded-full"
-                animate={{ height: ['20%', '80%', '40%', '100%', '30%'] }}
-                transition={{
-                  duration: 2 + Math.random() * 2,
-                  repeat: Infinity,
-                  repeatType: 'reverse',
-                  ease: 'easeInOut',
-                  delay: Math.random() * 2,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Play Button */}
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <div className="w-20 h-20 bg-[#FF3300] text-white rounded-full flex items-center justify-center pl-1 shadow-lg shadow-[#FF3300]/20 group-hover:scale-110 transition-transform duration-300">
-              <Play className="w-8 h-8 fill-current" />
-            </div>
-          </div>
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube.com/embed/RieZBcJO37A"
+            title="Video YouTube Google Ads"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
         
         <p className="mt-4 text-sm text-neutral-500 font-mono flex items-center justify-center gap-2">
