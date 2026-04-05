@@ -9,18 +9,18 @@ export function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl"
+        className="max-w-6xl"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-[4.5rem] font-bold tracking-tight text-neutral-950 mb-6 leading-[1.02]">
-          Vos chiffres Google Ads sont bons.<br />
-          <span className="text-neutral-400">
+        <h1 className="text-4xl sm:text-5xl md:text-[3.85rem] lg:text-[4.8rem] font-bold tracking-[-0.04em] text-neutral-950 mb-8 leading-[0.96]">
+          <span className="block">Vos chiffres Google Ads sont bons.</span>
+          <span className="mt-3 block text-neutral-400">
             Alors pourquoi votre business
-            <br className="hidden md:block" /> ne décolle pas ?
           </span>
+          <span className="block text-neutral-400">ne décolle pas ?</span>
         </h1>
-        <p className="mx-auto max-w-4xl text-lg sm:text-xl md:text-[1.7rem] text-neutral-600 mb-12 font-medium leading-[1.25]">
+        <p className="mx-auto max-w-3xl text-lg sm:text-xl md:text-[1.45rem] text-neutral-600 mb-12 font-medium leading-[1.3]">
           Parce que Google est optimisé pour dépenser votre budget, pas pour faire croître votre marge.
-          <br />
+          <br className="hidden sm:block" />
           Il est temps de sortir de la boîte noire.
         </p>
       </motion.div>
