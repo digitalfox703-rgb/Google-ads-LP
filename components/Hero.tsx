@@ -79,6 +79,7 @@ export function Hero() {
                 <LogoPlaceholder text="NEYSSA SHOP" />
                 <LogoPlaceholder text="BIOMIEL AND CO" />
                 <LogoPlaceholder text="MERKEZ AL BOURHAN" />
+                <LogoPlaceholder text="CUSTOM QAMIS" />
                 <LogoPlaceholder text="EL NABIL" />
                 <LogoPlaceholder text="TAJWID INSTITUT" />
                 <LogoPlaceholder text="MIEL ET VERTUS" />
