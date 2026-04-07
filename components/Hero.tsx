@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import type { ReactNode } from 'react';
 
 export function Hero() {
   return (
@@ -111,24 +112,25 @@ function AuditDashboardMock() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-120px' }}
       transition={{ duration: 0.7, delay: 0.1 }}
-      className="w-full mt-14"
+      className="w-full mt-14 overflow-hidden"
     >
-      <div className="mx-auto max-w-6xl rounded-[2rem] border border-neutral-200 bg-white p-4 shadow-[0_30px_90px_rgba(10,10,10,0.08)] sm:p-6">
-        <div className="relative overflow-hidden rounded-[1.6rem] border border-[#DADCE0] bg-[#F8F9FA] text-left shadow-sm">
-          <div className="flex items-center gap-3 border-b border-[#DADCE0] bg-white px-4 py-3">
+      <div className="mx-auto max-w-6xl rounded-[2rem] border border-neutral-200 bg-white p-3 shadow-[0_30px_90px_rgba(10,10,10,0.08)] sm:p-6">
+        <div className="relative overflow-x-auto overflow-y-hidden rounded-[1.6rem] border border-[#DADCE0] bg-[#F8F9FA] text-left shadow-sm">
+          <div className="min-w-[520px] sm:min-w-[720px]">
+          <div className="flex items-center gap-3 border-b border-[#DADCE0] bg-white px-3 py-2.5 sm:px-4 sm:py-3">
             <div className="flex items-center gap-2">
-              <div className="relative h-8 w-8">
-                <div className="absolute left-0 top-2 h-4 w-4 -skew-x-[18deg] rounded-sm bg-[#34A853]" />
-                <div className="absolute left-2.5 top-0 h-7 w-3 -skew-x-[18deg] rounded-sm bg-[#4285F4]" />
-                <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-[#FBBC05]" />
+              <div className="relative h-7 w-7 sm:h-8 sm:w-8">
+                <div className="absolute left-0 top-2 h-3.5 w-3.5 -skew-x-[18deg] rounded-sm bg-[#34A853] sm:h-4 sm:w-4" />
+                <div className="absolute left-2 top-0 h-6 w-2.5 -skew-x-[18deg] rounded-sm bg-[#4285F4] sm:left-2.5 sm:h-7 sm:w-3" />
+                <div className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-[#FBBC05] sm:h-3 sm:w-3" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-[#202124]">Google Ads</p>
+                <p className="text-xs font-semibold text-[#202124] sm:text-sm">Google Ads</p>
                 <p className="text-[11px] text-[#5F6368]">Vue d'ensemble</p>
               </div>
             </div>
             <div className="min-w-0 flex-1">
-              <div className="h-9 rounded-full border border-[#DADCE0] bg-[#F1F3F4]" />
+              <div className="h-8 rounded-full border border-[#DADCE0] bg-[#F1F3F4] sm:h-9" />
             </div>
             <div className="hidden h-8 w-8 rounded-full bg-[#F1F3F4] sm:block" />
           </div>
@@ -143,7 +145,7 @@ function AuditDashboardMock() {
             </div>
 
             <div className="relative bg-white">
-              <div className="border-b border-[#DADCE0] px-4 py-3">
+              <div className="border-b border-[#DADCE0] px-3 py-3 sm:px-4">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="text-sm font-semibold text-[#202124]">Vue d'ensemble</p>
@@ -155,25 +157,31 @@ function AuditDashboardMock() {
                 </div>
               </div>
 
-              <div className="grid gap-3 border-b border-[#DADCE0] bg-[#F8F9FA] px-4 py-4 md:grid-cols-3">
+              <div className="px-3 pt-3 md:hidden">
+                <MobileInlineAuditNote className="mb-3">
+                  45% du budget est gaspille. Et cela arrange autant votre annonceur que Google Ads.
+                </MobileInlineAuditNote>
+              </div>
+
+              <div className="grid gap-3 border-b border-[#DADCE0] bg-[#F8F9FA] px-3 py-3 sm:px-4 sm:py-4 md:grid-cols-3">
                 <GoogleMetricCard label="Couts" value="5 960 EUR" delta="-12,4 %" />
                 <GoogleMetricCard label="Conversions" value="312" delta="+18,9 %" />
                 <GoogleMetricCard label="Valeur conv. / cout" value="4,8" delta="+21,7 %" />
               </div>
 
-              <div className="grid gap-4 px-4 py-4 xl:grid-cols-[1.35fr_0.9fr]">
-                <div className="rounded-2xl border border-[#DADCE0] bg-white p-4">
+              <div className="grid gap-3 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4 xl:grid-cols-[1.35fr_0.9fr]">
+                <div className="rounded-2xl border border-[#DADCE0] bg-white p-3 sm:p-4">
                   <div className="mb-4 flex items-center justify-between gap-3">
                     <div>
                       <p className="text-sm font-semibold text-[#202124]">Performance</p>
                       <p className="text-xs text-[#5F6368]">Conversions et valeur de conversion</p>
                     </div>
-                    <div className="rounded-md bg-[#F1F3F4] px-2.5 py-1 text-xs text-[#5F6368]">
+                    <div className="rounded-md bg-[#F1F3F4] px-2 py-1 text-[11px] text-[#5F6368] sm:px-2.5 sm:text-xs">
                       Tous les clics
                     </div>
                   </div>
 
-                  <div className="flex h-44 items-end gap-2 rounded-xl bg-[#F8F9FA] px-3 py-4">
+                  <div className="flex h-36 items-end gap-1.5 rounded-xl bg-[#F8F9FA] px-2 py-3 sm:h-44 sm:gap-2 sm:px-3 sm:py-4">
                     <GoogleBar blue="42%" green="26%" />
                     <GoogleBar blue="49%" green="31%" />
                     <GoogleBar blue="53%" green="34%" />
@@ -189,7 +197,7 @@ function AuditDashboardMock() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-[#DADCE0] bg-white p-4">
+                <div className="rounded-2xl border border-[#DADCE0] bg-white p-3 sm:p-4">
                   <div className="mb-4">
                     <p className="text-sm font-semibold text-[#202124]">Campagnes</p>
                     <p className="text-xs text-[#5F6368]">Resume rapide</p>
@@ -206,6 +214,12 @@ function AuditDashboardMock() {
                     <CampaignRow name="Search - Prospecting" conversions="38" roas="2,1" />
                   </div>
                 </div>
+              </div>
+
+              <div className="px-3 pb-3 md:hidden">
+                <MobileInlineAuditNote>
+                  Le ROAS est presque toujours gonfle par l&apos;attribution Google Ads.
+                </MobileInlineAuditNote>
               </div>
 
               <div className="absolute left-[18px] top-[146px] hidden max-w-[250px] rounded-2xl border-2 border-[#FF3300] bg-white/95 p-3 shadow-[0_18px_40px_rgba(255,51,0,0.16)] md:block">
@@ -226,6 +240,7 @@ function AuditDashboardMock() {
                 </p>
               </div>
 
+            </div>
             </div>
           </div>
         </div>
@@ -256,11 +271,11 @@ function GoogleMetricCard({
   delta: string;
 }) {
   return (
-    <div className="rounded-2xl border border-[#DADCE0] bg-white px-4 py-3">
+    <div className="rounded-2xl border border-[#DADCE0] bg-white px-3 py-3 sm:px-4">
       <p className="text-xs text-[#5F6368]">{label}</p>
-      <div className="mt-2 flex items-end justify-between gap-3">
-        <p className="text-2xl font-semibold tracking-tight text-[#202124]">{value}</p>
-        <span className="rounded-full bg-[#E6F4EA] px-2.5 py-1 text-xs font-semibold text-[#137333]">
+      <div className="mt-2 flex items-end justify-between gap-2">
+        <p className="text-lg font-semibold tracking-tight text-[#202124] sm:text-2xl">{value}</p>
+        <span className="shrink-0 rounded-full bg-[#E6F4EA] px-2.5 py-1 text-xs font-semibold text-[#137333]">
           {delta}
         </span>
       </div>
@@ -304,10 +319,25 @@ function CampaignRow({
   muted?: boolean;
 }) {
   return (
-    <div className="grid grid-cols-[1.4fr_0.8fr_0.8fr] border-t border-[#DADCE0] px-3 py-3 text-sm text-[#202124]">
+    <div className="grid min-w-0 grid-cols-[1.4fr_0.8fr_0.8fr] border-t border-[#DADCE0] px-3 py-3 text-sm text-[#202124]">
       <span className={muted ? 'text-[#1967D2]' : ''}>{name}</span>
       <span>{conversions}</span>
       <span>{roas}</span>
+    </div>
+  );
+}
+
+function MobileInlineAuditNote({
+  children,
+  className = '',
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={`rounded-2xl border border-[#FF3300]/25 bg-[#FFF7F4] p-3 text-left shadow-sm ${className}`}>
+      <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#FF3300]">Audit</p>
+      <p className="mt-2 text-sm font-semibold text-neutral-900">{children}</p>
     </div>
   );
 }

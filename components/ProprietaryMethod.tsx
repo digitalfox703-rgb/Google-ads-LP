@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import type { ReactNode } from 'react';
 
 const sheetRows = [
   ['02/04', 'Search - Marque', '1 248 EUR', '12 410 EUR', '7 820 EUR', '3 140 EUR', 'OK'],
@@ -51,18 +52,19 @@ export function ProprietaryMethod() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="relative"
+            className="relative overflow-hidden"
           >
-            <div className="relative overflow-hidden rounded-[2rem] border border-[#D0D7DE] bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
-              <div className="flex items-center gap-2 border-b border-[#D0D7DE] bg-[#1F6F43] px-4 py-3 text-white">
-                <div className="grid h-7 w-7 place-items-center rounded bg-white/15 text-xs font-semibold">
+            <div className="relative overflow-x-auto overflow-y-hidden rounded-[2rem] border border-[#D0D7DE] bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
+              <div className="min-w-[540px] sm:min-w-[760px]">
+              <div className="flex items-center gap-2 border-b border-[#D0D7DE] bg-[#1F6F43] px-3 py-2.5 text-white sm:px-4 sm:py-3">
+                <div className="grid h-6 w-6 place-items-center rounded bg-white/15 text-[10px] font-semibold sm:h-7 sm:w-7 sm:text-xs">
                   X
                 </div>
-                <p className="text-sm font-semibold">Pilotage-rentabilite-journalier.xlsx</p>
+                <p className="text-xs font-semibold sm:text-sm">Pilotage-rentabilite-journalier.xlsx</p>
               </div>
 
-              <div className="border-b border-[#D0D7DE] bg-[#F3F6F4] px-4 py-3">
-                <div className="grid grid-cols-[0.65fr_1.25fr_repeat(5,minmax(90px,1fr))] gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#51606B]">
+              <div className="border-b border-[#D0D7DE] bg-[#F3F6F4] px-3 py-2.5 sm:px-4 sm:py-3">
+                <div className="grid grid-cols-[0.55fr_1.15fr_repeat(5,minmax(72px,1fr))] gap-2 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#51606B] sm:grid-cols-[0.65fr_1.25fr_repeat(5,minmax(90px,1fr))] sm:text-[11px] sm:tracking-[0.12em]">
                   <span>Date</span>
                   <span>Campagne</span>
                   <span>Depense</span>
@@ -74,11 +76,17 @@ export function ProprietaryMethod() {
               </div>
 
               <div className="relative bg-white">
+                <div className="px-3 pt-3 md:hidden">
+                  <MobileAuditNote className="mb-3">
+                    Ici, on confronte le CA attribue par Google Ads au CA vraiment encaisse.
+                  </MobileAuditNote>
+                </div>
+
                 <div className="space-y-0 border-b border-[#D0D7DE]">
                   {sheetRows.map((row, index) => (
                     <div
                       key={`${row[0]}-${row[1]}`}
-                      className={`grid grid-cols-[0.65fr_1.25fr_repeat(5,minmax(90px,1fr))] gap-2 px-4 py-3 text-sm text-[#1F2937] ${
+                      className={`grid grid-cols-[0.55fr_1.15fr_repeat(5,minmax(72px,1fr))] gap-2 px-3 py-2.5 text-xs text-[#1F2937] sm:grid-cols-[0.65fr_1.25fr_repeat(5,minmax(90px,1fr))] sm:px-4 sm:py-3 sm:text-sm ${
                         index % 2 === 0 ? 'bg-white' : 'bg-[#FBFCFC]'
                       }`}
                     >
@@ -93,11 +101,18 @@ export function ProprietaryMethod() {
                   ))}
                 </div>
 
+                <div className="px-3 py-3 md:hidden">
+                  <MobileAuditNote>
+                    C&apos;est ce controle quotidien qui rapproche enfin vos chiffres publicitaires du reel.
+                  </MobileAuditNote>
+                </div>
+
                 <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.04),rgba(255,255,255,0.16))]" />
+              </div>
               </div>
             </div>
 
-            <div className="absolute -left-2 top-16 max-w-[220px] rounded-2xl border-2 border-[#FF3300] bg-white/95 p-3 shadow-[0_18px_40px_rgba(255,51,0,0.14)]">
+            <div className="absolute -left-2 top-16 hidden max-w-[220px] rounded-2xl border-2 border-[#FF3300] bg-white/95 p-3 shadow-[0_18px_40px_rgba(255,51,0,0.14)] md:block">
               <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#FF3300]">
                 Audit
               </p>
@@ -106,7 +121,7 @@ export function ProprietaryMethod() {
               </p>
             </div>
 
-            <div className="absolute bottom-5 right-5 max-w-[250px] rounded-2xl border-2 border-[#FF3300] bg-white/95 p-3 shadow-[0_18px_40px_rgba(255,51,0,0.14)]">
+            <div className="absolute bottom-5 right-5 hidden max-w-[250px] rounded-2xl border-2 border-[#FF3300] bg-white/95 p-3 shadow-[0_18px_40px_rgba(255,51,0,0.14)] md:block">
               <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#FF3300]">
                 Audit
               </p>
@@ -133,5 +148,20 @@ export function ProprietaryMethod() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function MobileAuditNote({
+  children,
+  className = '',
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={`rounded-2xl border border-[#FF3300]/25 bg-[#FFF7F4] p-3 text-left shadow-sm ${className}`}>
+      <p className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#FF3300]">Audit</p>
+      <p className="mt-2 text-sm font-semibold text-neutral-900">{children}</p>
+    </div>
   );
 }
