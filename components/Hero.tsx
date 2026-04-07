@@ -73,12 +73,18 @@ export function Hero() {
           >
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex gap-16 items-center">
-                <LogoPlaceholder text="ACME CORP" />
-                <LogoPlaceholder text="GLOBAL TECH" />
-                <LogoPlaceholder text="NEXUS" />
-                <LogoPlaceholder text="PULSE" />
-                <BDouinLogo />
-                <LogoPlaceholder text="LUMINA" />
+                <LogoPlaceholder text="BDOUIN (MUSLIM SHOW)" />
+                <LogoPlaceholder text="DC JEANS" />
+                <LogoPlaceholder text="MAKTABA TAWHID" />
+                <LogoPlaceholder text="NEYSSA SHOP" />
+                <LogoPlaceholder text="BIOMIEL AND CO" />
+                <LogoPlaceholder text="MERKEZ AL BOURHAN" />
+                <LogoPlaceholder text="EL NABIL" />
+                <LogoPlaceholder text="TAJWID INSTITUT" />
+                <LogoPlaceholder text="MIEL ET VERTUS" />
+                <LogoPlaceholder text="FRANCE MEKKAH" />
+                <LogoPlaceholder text="SAYF" />
+                
               </div>
             ))}
           </motion.div>
@@ -93,30 +99,6 @@ function LogoPlaceholder({ text }: { text: string }) {
     <div className="text-xl font-bold tracking-tighter text-neutral-800 flex items-center gap-2">
       <div className="w-6 h-6 bg-neutral-800 rounded-sm" />
       {text}
-    </div>
-  );
-}
-
-function BDouinLogo() {
-  return (
-    <div className="flex items-end gap-2 text-neutral-800">
-      <span className="font-serif text-[2.4rem] font-semibold leading-none tracking-[-0.04em]">
-        BDouin
-      </span>
-      <div className="relative mb-1 h-11 w-16 shrink-0 opacity-80">
-        <div className="absolute left-4 top-1 h-4 w-7 rounded-full border-[3px] border-neutral-400 bg-white" />
-        <div className="absolute left-1 top-4 h-5 w-6 rounded-full border-[3px] border-neutral-400 bg-white" />
-        <div className="absolute right-1 top-4 h-5 w-6 rounded-full border-[3px] border-neutral-400 bg-white" />
-        <div className="absolute left-6 top-0 h-5 w-7 rounded-full border-[3px] border-neutral-400 bg-white" />
-        <div className="absolute left-4 top-6 h-5 w-10 rounded-full border-[3px] border-neutral-400 bg-white" />
-        <div className="absolute left-[22px] top-[15px] h-1.5 w-1.5 rounded-full bg-neutral-400" />
-        <div className="absolute left-[28px] top-[13px] h-1.5 w-1.5 rounded-full bg-neutral-400" />
-        <div className="absolute left-[34px] top-[15px] h-1.5 w-1.5 rounded-full bg-neutral-400" />
-        <div className="absolute left-[24px] top-[19px] h-2.5 w-10 rounded-full border-[3px] border-neutral-400 border-t-0" />
-        <div className="absolute left-5 top-8 h-3 w-1 -rotate-12 rounded-full bg-neutral-400" />
-        <div className="absolute left-9 top-9 h-4 w-1 rotate-12 rounded-full bg-neutral-400" />
-        <div className="absolute left-13 top-8 h-3 w-1 rotate-[18deg] rounded-full bg-neutral-400" />
-      </div>
     </div>
   );
 }
